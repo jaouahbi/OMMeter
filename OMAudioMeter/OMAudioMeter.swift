@@ -37,12 +37,6 @@ public class OMAudioMeter : UIControl
     private var upperChordLeftPoint:CGPoint = CGPoint.zero
     private var upperChordRightPoint:CGPoint = CGPoint.zero
     
-    
-    private let startAngle1 = -0.78539816339  //-(PI / 4 = -45 degrees)
-    private let endAngle1   = -2.35619449019  //-(3 * PI / 4 = 135 degrees)
-    private let endAngle2   = 0.78539816339   //(PI / 4 = 45 degrees)
-    private let endAngle3   = 2.35619449019   //(3 * PI / 4 = -135 degrees)
-    
     private var startGradientPoints:[CGPoint] = [CGPoint]()
     
     /// Glass effect
@@ -78,10 +72,10 @@ public class OMAudioMeter : UIControl
     private var ticksPoints:[CGPoint]  = [CGPoint]()
     
     /// Number of ticks
-    private var numberOfTicks:Int      = 100 + 1
+    private var numberOfTicks:Int = 100 + 1
     
     /// Ticks line width
-    private var tickLineWidth:CGFloat  = 0.18
+    private var tickLineWidth:CGFloat = 0.18
     
     /// Set the stroke ticks color (default: black)
     var strokeTicksColor:UIColor = UIColor.gray {
@@ -103,7 +97,7 @@ public class OMAudioMeter : UIControl
             setNeedsLayout()
         }
     }
-    /// value
+    /// Current value
     public var value:CGFloat = 0 {
         didSet {
             value.clamp(toLowerValue: minimumValue, upperValue: maximumValue)
@@ -123,6 +117,7 @@ public class OMAudioMeter : UIControl
             setNeedsLayout()
         }
     }
+    
     /// Contructors
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -198,8 +193,7 @@ public class OMAudioMeter : UIControl
                     let percentPointDifference = ((endPoint.y - startPoint.y) * percentGradient)
                     endPoint = CGPoint(x:startPoint.x, y:startPoint.y + percentPointDifference)
                 }
-                
-                // draw the gradient.
+                // Draw the gradient.
                 if let  gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(),
                                               colors: [startColor.cgColor, endColor.cgColor] as CFArray,
                                               locations: nil) {
@@ -211,11 +205,11 @@ public class OMAudioMeter : UIControl
                 elementIndex = elementIndex + 1
             } while value > elementValue + minimumValue
             
-            //
+            // Draw the glass effect.
             if (glassEffect) {
                 drawGlassEffect(context: context)
             }
-            
+            // Draw the text and the ticks
             drawTicksAndText(context:context,
                              color:strokeTicksColor.cgColor,
                              tickLineWidth:tickLineWidth)
@@ -252,8 +246,7 @@ public class OMAudioMeter : UIControl
         }
         numberOfGradientElements = CGFloat(gradientColors.count - 1)
         for colorIndex in 0 ..< gradientColors.count  {
-            let pointGradientNewY   = ((CGFloat(colorIndex) *  -height) / numberOfGradientElements)
-            let pointGradientStartY = height + pointGradientNewY
+            let pointGradientStartY = height +  ((CGFloat(colorIndex) *  -height) / numberOfGradientElements)
             startGradientPoints.append(CGPoint(x:self.bounds.midX, y:pointGradientStartY))
             //DBG
             //print("\(colorIndex) \(startGradientPoint) \(newStartGradientPointY) \(gradientColors[colorIndex].shortDescription)")
@@ -304,6 +297,10 @@ public class OMAudioMeter : UIControl
         context.setShadow(offset: shadowOffset, blur: shadowBlur, color:shadowColor)
         context.setLineWidth(tickLineWidth)
         
+        let tickLengthTen  =  ((self.bounds.width  / 3.0) * 0.5)
+        let tickLengthFive =  ((self.bounds.width  / 3.0) * 0.25)
+        let tickLengthOne  =  ((self.bounds.width  / 3.0) * 0.125)
+        
         // Configure the ticks
         let numberOfTicksElements = CGFloat(numberOfTicks - 1)
         let maximumTickValue      = minimumValue + CGFloat(10 * numberOfTicksElements)
@@ -313,7 +310,7 @@ public class OMAudioMeter : UIControl
             let pointTickMid   = CGPoint(x:self.bounds.midX,
                                          y:(self.bounds.height + (CGFloat(i) * -self.bounds.height) / numberOfTicksElements))
             if i % 10 == 0 {
-                targetPoint = CGPoint(x:pointTickMid.x - ((self.bounds.width  / 3.0) * 0.5) , y:pointTickMid.y)
+                targetPoint = CGPoint(x:pointTickMid.x - tickLengthTen , y:pointTickMid.y)
                 let textLevel = map(input: minimumValue + CGFloat(i * 10),
                                     input_start:minimumValue ,
                                     input_end: maximumTickValue,
@@ -325,13 +322,13 @@ public class OMAudioMeter : UIControl
                                       height: stringMaxSize.height)
                 "\(Int(textLevel))".draw(with:textLevelRect, options: .usesLineFragmentOrigin, attributes: fontAttributtes, context: nil)
                 context.addRect(textLevelRect)
-                context.move(to:CGPoint(x:pointTickMid.x + ((self.bounds.width  / 3.0) * 0.5), y:pointTickMid.y))
+                context.move(to:CGPoint(x:pointTickMid.x + tickLengthTen, y:pointTickMid.y))
             } else if i % 5 == 0 {
-                targetPoint = CGPoint(x:pointTickMid.x - ((self.bounds.width  / 3.0) * 0.25), y:pointTickMid.y)
-                context.move(to:CGPoint(x:pointTickMid.x + ((self.bounds.width  / 3.0) * 0.25), y:pointTickMid.y))
+                targetPoint = CGPoint(x:pointTickMid.x - tickLengthFive, y:pointTickMid.y)
+                context.move(to:CGPoint(x:pointTickMid.x + tickLengthFive, y:pointTickMid.y))
             } else {
-                targetPoint = CGPoint(x:pointTickMid.x - ((self.bounds.width  / 3.0) * 0.125), y:pointTickMid.y)
-                context.move(to:CGPoint(x:pointTickMid.x +  ((self.bounds.width  / 3.0) * 0.125), y:pointTickMid.y))
+                targetPoint = CGPoint(x:pointTickMid.x - tickLengthOne,  y:pointTickMid.y)
+                context.move(to:CGPoint(x:pointTickMid.x + tickLengthOne, y:pointTickMid.y))
             }
             context.addLine(to: targetPoint)
             // Stroke path

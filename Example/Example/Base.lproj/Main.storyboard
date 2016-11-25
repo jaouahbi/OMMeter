@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7I-Oz-PWz" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9vX-Tv-Yiw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLj-hh-xXE" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="120" y="0.0" width="60" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="mzQ-hy-EMW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sj-yI-fue">
+                                <rect key="frame" x="180" y="0.0" width="108" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWj-bO-hzQ" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="54" y="0.0" width="50" height="667"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-ZP-ETX" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="0.0" width="51" height="667"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1764705882" green="0.2470588235" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="Bar-Eh-og4"/>
+                                    <constraint firstItem="yWj-bO-hzQ" firstAttribute="leading" secondItem="FLU-ZP-ETX" secondAttribute="trailing" constant="-1" id="IJc-9R-wfg"/>
+                                    <constraint firstAttribute="bottom" secondItem="FLU-ZP-ETX" secondAttribute="bottom" id="Iwp-Wf-x0p"/>
+                                    <constraint firstItem="FLU-ZP-ETX" firstAttribute="top" secondItem="8sj-yI-fue" secondAttribute="top" id="PQd-bO-A67"/>
+                                    <constraint firstItem="yWj-bO-hzQ" firstAttribute="height" secondItem="FLU-ZP-ETX" secondAttribute="height" id="hiw-8H-tym"/>
+                                    <constraint firstAttribute="trailing" secondItem="yWj-bO-hzQ" secondAttribute="trailing" constant="4" id="icD-I9-yBs"/>
+                                    <constraint firstAttribute="bottom" secondItem="yWj-bO-hzQ" secondAttribute="bottom" id="s88-bf-Okw"/>
+                                    <constraint firstItem="yWj-bO-hzQ" firstAttribute="width" secondItem="FLU-ZP-ETX" secondAttribute="width" constant="-1" id="wlG-qb-OtS"/>
+                                    <constraint firstItem="FLU-ZP-ETX" firstAttribute="leading" secondItem="8sj-yI-fue" secondAttribute="leading" constant="4" id="x33-KU-H9i"/>
+                                    <constraint firstItem="yWj-bO-hzQ" firstAttribute="top" secondItem="8sj-yI-fue" secondAttribute="top" id="ywk-ER-QZ2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q42-Mq-FoF" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="288" y="0.0" width="87" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="0b9-44-7A2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q42-Mq-FoF" secondAttribute="bottom" id="1St-bK-bbY"/>
+                            <constraint firstItem="8sj-yI-fue" firstAttribute="leading" secondItem="uLj-hh-xXE" secondAttribute="trailing" id="EZQ-fH-W11"/>
+                            <constraint firstItem="uLj-hh-xXE" firstAttribute="leading" secondItem="d7I-Oz-PWz" secondAttribute="trailing" id="K5h-1P-hWW"/>
+                            <constraint firstItem="d7I-Oz-PWz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lue-K1-vef"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8sj-yI-fue" secondAttribute="bottom" id="NKE-22-AZj"/>
+                            <constraint firstItem="d7I-Oz-PWz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RPU-kA-SOK"/>
+                            <constraint firstAttribute="trailing" secondItem="Q42-Mq-FoF" secondAttribute="trailing" id="UPo-M1-wVo"/>
+                            <constraint firstItem="8sj-yI-fue" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Zmj-yb-QXT"/>
+                            <constraint firstItem="Q42-Mq-FoF" firstAttribute="leading" secondItem="8sj-yI-fue" secondAttribute="trailing" id="dND-bA-2L1"/>
+                            <constraint firstItem="uLj-hh-xXE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="fmp-fb-UiT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d7I-Oz-PWz" secondAttribute="bottom" id="g8M-io-Q6n"/>
+                            <constraint firstItem="Q42-Mq-FoF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qLD-tD-E1x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uLj-hh-xXE" secondAttribute="bottom" id="ux8-Zi-Juc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioMeter" destination="d7I-Oz-PWz" id="1qs-MS-NLQ"/>
+                        <outlet property="audioMeterLevel" destination="Q42-Mq-FoF" id="L9K-s7-6el"/>
+                        <outlet property="audioMeterPeak" destination="uLj-hh-xXE" id="UHk-yH-tO3"/>
+                        <outlet property="audioMeterSteroL" destination="FLU-ZP-ETX" id="CuN-ox-m1l"/>
+                        <outlet property="audioMeterSteroR" destination="yWj-bO-hzQ" id="xO7-dX-TLd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>

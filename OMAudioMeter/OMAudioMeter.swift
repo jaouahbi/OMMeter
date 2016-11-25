@@ -43,14 +43,12 @@ public class OMAudioMeter : UIControl
     private let endAngle2   = 0.78539816339   //(PI / 4 = 45 degrees)
     private let endAngle3   = 2.35619449019   //(3 * PI / 4 = -135 degrees)
     
-    private var ticksPoints:[CGPoint] = [CGPoint]()
     private var startGradientPoints:[CGPoint] = [CGPoint]()
     
     /// Glass effect
     
     private var rectGlassLeft:CGRect = CGRect.zero;
     private var rectGlassRight:CGRect = CGRect.zero;
-    
     
     private var numberOfGradientElements:CGFloat = 0
     private var spanValue:CGFloat = 0
@@ -59,6 +57,7 @@ public class OMAudioMeter : UIControl
     
     /// Font
     
+    /// Font attributes
     private var fontAttributtes:[String:Any] = [:]
     
     ///Font name (default:HelveticaNeue-Light)
@@ -74,19 +73,16 @@ public class OMAudioMeter : UIControl
         }
     }
     /// Ticks
-    private let tickLenghtTen:CGFloat  = 8.0
-    private let tickLenghtFive:CGFloat = 4.0
-    private let tickLenghtOne:CGFloat  = 2.0
+    
+    /// Tick Points
+    private var ticksPoints:[CGPoint]  = [CGPoint]()
     
     /// Number of ticks
-    private var numberOfTicks:Int = 101
+    private var numberOfTicks:Int      = 100 + 1
     
     /// Ticks line width
-    private var tickLineWidth:CGFloat = 0.18 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
+    private var tickLineWidth:CGFloat  = 0.18
+    
     /// Set the stroke ticks color (default: black)
     var strokeTicksColor:UIColor = UIColor.gray {
         didSet {
@@ -177,7 +173,7 @@ public class OMAudioMeter : UIControl
     override public func draw(_ rect: CGRect) {
         
         if self.isHidden || startGradientPoints.count == 0 {
-            // nothing to do.
+            // Nothing to do.
             return
         }
         if let context = UIGraphicsGetCurrentContext() {

@@ -169,7 +169,6 @@ class ViewController: UIViewController {
         
         let dpLink = CADisplayLink( target:self, selector:#selector(updateMeters));
         dpLink.add(to: RunLoop.current,forMode:RunLoopMode.commonModes);
-
     }
 }
 

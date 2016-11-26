@@ -165,7 +165,7 @@ class ViewController: UIViewController {
         audioMeter.maximumValue = 20
         audioMeter.gradientColors = [UIColor.green,UIColor.yellow,UIColor.red]
         
-        playSound(name: "test_-10dBs",withExtension: "mp3")
+        playSound(name: "test_-20dBs",withExtension: "mp3")
         
         let dpLink = CADisplayLink( target:self, selector:#selector(updateMeters));
         dpLink.add(to: RunLoop.current,forMode:RunLoopMode.commonModes);

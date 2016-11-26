@@ -9,7 +9,7 @@ Custom Lightweight CoreGraphics Meter UIControl in Swift
 
 ## History
 
-Custom Lightweight CoreGraphics Audio Meter UIControl
+Custom Lightweight CoreGraphics Meter UIControl
 
 ![](https://github.com/jaouahbi/OMMeter/blob/master/ScreenShot/ScreenShot.png)
 

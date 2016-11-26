@@ -20,7 +20,7 @@
 		358B4BB91DE97809004958B0 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB21DE97809004958B0 /* UIColor+Extensions.swift */; };
 		358B4BBA1DE97809004958B0 /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB31DE97809004958B0 /* UIColor+Interpolation.swift */; };
 		358B4BBB1DE97809004958B0 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB41DE97809004958B0 /* UIFont+Extensions.swift */; };
-		35F21FBE1DE975BA00D4BC0A /* test_-20dBs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */; };
+		358B4BBC1DE978F5004958B0 /* test_-20dBs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,9 +175,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358B4BBC1DE978F5004958B0 /* test_-20dBs.mp3 in Resources */,
 				357DB49C1DD34B0B00873A82 /* Main.storyboard in Resources */,
 				357DB49A1DD34B0B00873A82 /* Assets.xcassets in Resources */,
-				35F21FBE1DE975BA00D4BC0A /* test_-20dBs.mp3 in Resources */,
 				357DB49B1DD34B0B00873A82 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jom.OMAudioMeter;
+				PRODUCT_BUNDLE_IDENTIFIER = jom.OMMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -335,7 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jom.OMAudioMeter;
+				PRODUCT_BUNDLE_IDENTIFIER = jom.OMMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -22,14 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7I-Oz-PWz" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7I-Oz-PWz" customClass="OMMeter" customModule="Example" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="9vX-Tv-Yiw"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLj-hh-xXE" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLj-hh-xXE" customClass="OMMeter" customModule="Example" customModuleProvider="target">
                                 <rect key="frame" x="120" y="0.0" width="60" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -39,11 +39,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sj-yI-fue">
                                 <rect key="frame" x="180" y="0.0" width="108" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWj-bO-hzQ" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWj-bO-hzQ" customClass="OMMeter" customModule="Example" customModuleProvider="target">
                                         <rect key="frame" x="54" y="0.0" width="50" height="667"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-ZP-ETX" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-ZP-ETX" customClass="OMMeter" customModule="Example" customModuleProvider="target">
                                         <rect key="frame" x="4" y="0.0" width="51" height="667"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -62,7 +62,7 @@
                                     <constraint firstItem="yWj-bO-hzQ" firstAttribute="top" secondItem="8sj-yI-fue" secondAttribute="top" id="ywk-ER-QZ2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q42-Mq-FoF" customClass="OMAudioMeter" customModule="Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q42-Mq-FoF" customClass="OMMeter" customModule="Example" customModuleProvider="target">
                                 <rect key="frame" x="288" y="0.0" width="87" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

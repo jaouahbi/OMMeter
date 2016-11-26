@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'OMMeter'
   s.version          = '0.1.0'
-  s.summary          = 'Custom Lightweight CoreGraphics Meter UIControl in Swift.'
+  s.summary          = 'Lightweight CoreGraphics Meter UIControl'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,10 +17,10 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description     = 'Lightweight CoreGraphics Meter UIControl in Swift.'
+  s.description     = 'Custom Lightweight CoreGraphics Meter UIControl.'
 
   s.homepage         = 'https://github.com/jaouahbi/OMMeter'
-  s.screenshots      = 'https://github.com/jaouahbi/OMMeter/blob/master/ScreenShot/ScreenShot.png'
+  s.screenshots      = 'https://s3.amazonaws.com/cocoacontrols_production/uploads/control_image/image/10505/ScreenShot.png'
   s.license          = { :type => 'APACHE 2.0', :file => 'LICENSE' }
   s.author           = { 'Jorge Ouahbi' => 'jorgeouahbi@gmail.com' }
   s.source           = { :git => 'https://github.com/jaouahbi/OMMeter.git', :tag => s.version.to_s }

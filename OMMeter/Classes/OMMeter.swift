@@ -16,9 +16,9 @@
 
 import  UIKit
 
-/// OMAudioMeter class
+/// OMMeter class
 
-public class OMAudioMeter : UIControl
+public class OMMeter : UIControl
 {
     private let reflectEffectGradient = CGGradient(colorSpace: CGColorSpaceCreateDeviceRGB(),
                                                    colorComponents: [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0], locations: nil, count: 2)!

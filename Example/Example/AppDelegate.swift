@@ -16,7 +16,7 @@
 
 //
 //  AppDelegate.swift
-//  OMAudioMeter
+//  OMMeter
 //
 //  Created by Jorge Ouahbi on 7/11/16.
 //  Copyright © 2016 Jorge Ouahbi. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  OMAudioMeter
+//  OMMeter
 //
 //  Created by Jorge Ouahbi on 7/11/16.
 //  Copyright © 2016 Jorge Ouahbi. All rights reserved.
@@ -77,11 +77,11 @@ let gradientColorsHotToCold = Array([
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var audioMeter:OMAudioMeter!
-    @IBOutlet weak var audioMeterPeak:OMAudioMeter!
-    @IBOutlet weak var audioMeterSteroR:OMAudioMeter!
-    @IBOutlet weak var audioMeterSteroL:OMAudioMeter!
-    @IBOutlet weak var audioMeterLevel:OMAudioMeter!
+    @IBOutlet weak var audioMeter:OMMeter!
+    @IBOutlet weak var audioMeterPeak:OMMeter!
+    @IBOutlet weak var audioMeterSteroR:OMMeter!
+    @IBOutlet weak var audioMeterSteroL:OMMeter!
+    @IBOutlet weak var audioMeterLevel:OMMeter!
     
     var meterTable:AudioMeterTable = AudioMeterTable()!
     var player: AVAudioPlayer = AVAudioPlayer()
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
 
     
     func updateMeters() {
-        let scale = 10.0;
+        let scale = 100.0;
         if (player.isPlaying ) {
             player.updateMeters()
             var power = 0.0;
@@ -147,8 +147,8 @@ class ViewController: UIViewController {
         audioMeterPeak.gradientColors =  [UIColor.green,UIColor.yellow,UIColor.red]
         
         audioMeterLevel.minimumValue = 0
-        audioMeterLevel.maximumValue = 10
-        audioMeterLevel.gradientColors =   [UIColor.purple,UIColor.purple,UIColor.orange,UIColor.orange,UIColor.red,UIColor.red]
+        audioMeterLevel.maximumValue = 100
+        audioMeterLevel.gradientColors =   [UIColor.orange,UIColor.red]
         
         
         audioMeterSteroR.minimumValue = -80
@@ -165,7 +165,7 @@ class ViewController: UIViewController {
         audioMeter.maximumValue = 20
         audioMeter.gradientColors = [UIColor.green,UIColor.yellow,UIColor.red]
         
-        playSound(name: "test_-20dBs",withExtension: "mp3")
+        playSound(name: "test_-10dBs",withExtension: "mp3")
         
         let dpLink = CADisplayLink( target:self, selector:#selector(updateMeters));
         dpLink.add(to: RunLoop.current,forMode:RunLoopMode.commonModes);

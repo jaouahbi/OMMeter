@@ -1,17 +1,17 @@
 
-# OMAudioMeter
+# OMMeter
 
-Custom Lightweight CoreGraphics Audio Meter UIControl in Swift
+Custom Lightweight CoreGraphics Meter UIControl in Swift
 
-[![Version](https://img.shields.io/cocoapods/v/OMAudioMeter.svg?style=flat)](http://cocoadocs.org/docsets/OMAudioMeter)
-[![Build Status](https://travis-ci.org/jaouahbi/OMAudioMeter.svg?branch=master)](https://travis-ci.org/jaouahbi/OMAudioMeter)
+[![Version](https://img.shields.io/cocoapods/v/OMMeter.svg?style=flat)](http://cocoadocs.org/docsets/OMMeter)
+[![Build Status](https://travis-ci.org/jaouahbi/OMMeter.svg?branch=master)](https://travis-ci.org/jaouahbi/OMMeter)
 
 
 ## History
 
 Custom Lightweight CoreGraphics Audio Meter UIControl
 
-![](https://github.com/jaouahbi/OMAudioMeter/blob/master/ScreenShot/ScreenShot.png)
+![](https://github.com/jaouahbi/OMMeter/blob/master/ScreenShot/ScreenShot.png)
 
 ## Features
 
@@ -29,13 +29,13 @@ Open a issue.
 
 ## Installation
 
-> To use OMAudioMeter you must include manually all swift files located inside the `OMAudioMeter` directory directly in your project.
+> To use OMMeter you must include manually all swift files located inside the `OMMeter` directory directly in your project.
 
 ## CocoaPods Installation
 
 > Easiest installation is through Cocoapods. Add the following line to your Podfile:
 
-pod `OMAudioMeter`
+pod `OMMeter`
 and run pod install in your terminal.
 
 ## Carthage Installation
@@ -46,8 +46,8 @@ and run pod install in your terminal.
 
 ## Credits
 
-OMAudioMeter is owned and maintained by the [Jorge Ouahbi](https://github.com/jaouahbi).
+OMMeter is owned and maintained by the [Jorge Ouahbi](https://github.com/jaouahbi).
 
 ## License
 
-OMAudioMeter is released under the APACHE 2.0 license. See LICENSE for details.
+OMMeter is released under the APACHE 2.0 license. See LICENSE for details.

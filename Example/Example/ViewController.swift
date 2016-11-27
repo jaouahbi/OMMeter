@@ -144,26 +144,26 @@ class ViewController: UIViewController {
         
         audioMeterPeak.minimumValue = -80
         audioMeterPeak.maximumValue = 20
-        audioMeterPeak.gradientColors =  [UIColor.green,UIColor.yellow,UIColor.red]
+        audioMeterPeak.colors =  [UIColor.green,UIColor.yellow,UIColor.red]
         
         audioMeterLevel.minimumValue = 0
         audioMeterLevel.maximumValue = 100
-        audioMeterLevel.gradientColors =   [UIColor.orange,UIColor.red]
+        audioMeterLevel.colors =   [UIColor.orange,UIColor.red]
         
         
         audioMeterSteroR.minimumValue = -80
         audioMeterSteroR.maximumValue = 20
-        audioMeterSteroR.gradientColors = [UIColor.green,UIColor.yellow,UIColor.orange,UIColor.red]
+        audioMeterSteroR.colors = [UIColor.green,UIColor.yellow,UIColor.orange,UIColor.red]
         
         
         audioMeterSteroL.minimumValue = -80
         audioMeterSteroL.maximumValue = 20
-        audioMeterSteroL.gradientColors = [UIColor.green,UIColor.yellow,UIColor.orange,UIColor.red]
+        audioMeterSteroL.colors = [UIColor.green,UIColor.yellow,UIColor.orange,UIColor.red]
         
 
         audioMeter.minimumValue = -80
         audioMeter.maximumValue = 20
-        audioMeter.gradientColors = [UIColor.green,UIColor.yellow,UIColor.red]
+        audioMeter.colors = [UIColor.green,UIColor.yellow,UIColor.red]
         
         playSound(name: "test_-20dBs",withExtension: "mp3")
         

@@ -111,9 +111,19 @@ public class OMMeter : UIControl
             setNeedsLayout()
         }
     }
+    
+    private var gradientColors:[UIColor] = [UIColor]()
     /// Set gradient colors
-    public var gradientColors:[UIColor] = [UIColor]() {
+    public var colors:[UIColor] = [UIColor]() {
         didSet {
+            // map monochrome colors to rgba colors
+            self.gradientColors = colors.map({
+                return ($0.colorSpace?.model == .monochrome) ?
+                    UIColor(red: $0.components[0],
+                            green : $0.components[0],
+                            blue  : $0.components[0],
+                            alpha : $0.components[1]) : $0
+            })
             setNeedsLayout()
         }
     }
@@ -243,7 +253,8 @@ public class OMMeter : UIControl
             // Duplicate the color
             let color = gradientColors[0]
             gradientColors = [color.lighterColor(percent: 0.8), color.darkerColor(percent: 0.5)]
-        }
+      }
+        
         numberOfGradientElements = CGFloat(gradientColors.count - 1)
         for colorIndex in 0 ..< gradientColors.count  {
             let pointGradientStartY = height +  ((CGFloat(colorIndex) *  -height) / numberOfGradientElements)

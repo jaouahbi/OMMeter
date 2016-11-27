@@ -111,13 +111,11 @@ public class OMMeter : UIControl
             setNeedsLayout()
         }
     }
-    
-    private var gradientColors:[UIColor] = [UIColor]()
     /// Set gradient colors
-    public var colors:[UIColor] = [UIColor]() {
+    public var gradientColors:[UIColor] = [UIColor]() {
         didSet {
             // map monochrome colors to rgba colors
-            self.gradientColors = colors.map({
+            self.gradientColors = gradientColors.map({
                 return ($0.colorSpace?.model == .monochrome) ?
                     UIColor(red: $0.components[0],
                             green : $0.components[0],

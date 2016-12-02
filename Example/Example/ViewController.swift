@@ -77,13 +77,10 @@ let gradientColorsHotToCold = Array([
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var audioMeter:OMMeter!
-    @IBOutlet weak var audioMeterPeak:OMMeter!
     @IBOutlet weak var audioMeterSteroR:OMMeter!
     @IBOutlet weak var audioMeterSteroL:OMMeter!
-    @IBOutlet weak var audioMeterLevel:OMMeter!
     
-    var meterTable:AudioMeterTable = AudioMeterTable()!
+    var averagePower:Bool = true
     var player: AVAudioPlayer = AVAudioPlayer()
     
     func playSound(name:String,withExtension:String = "mp3", numberOfLoops:Int = -1, meteringEnabled:Bool = true) {
@@ -106,50 +103,36 @@ class ViewController: UIViewController {
             print("error: \(error.localizedDescription)")
         }
     }
-
+    
     
     func updateMeters() {
-        let scale = 100.0;
         if (player.isPlaying ) {
             player.updateMeters()
             var power = 0.0;
-            var midPower = 0.0;
-            var peak = 0.0;
-            var midPeak = 0.0;
+            var peak  = 0.0;
             for i in 0 ..< player.numberOfChannels {
                 power = Double(player.averagePower(forChannel: i))
                 peak  = Double(player.peakPower(forChannel: i))
-                if i == 0 {
-                    audioMeterSteroR.value = CGFloat(power)
+                
+                if averagePower {
+                    if i == 0 {
+                        audioMeterSteroR.value = CGFloat(power)
+                    } else {
+                        audioMeterSteroL.value = CGFloat(power)
+                    }
                 } else {
-                    audioMeterSteroL.value = CGFloat(power)
+                    if i == 0 {
+                        audioMeterSteroR.value = CGFloat(peak)
+                    } else {
+                        audioMeterSteroL.value = CGFloat(peak)
+                    }
                 }
-                midPower += power
-                midPeak  += peak
             }
-            midPower /= Double(player.numberOfChannels)
-            midPeak  /= Double(player.numberOfChannels)
-            
-            audioMeter.value  = CGFloat(midPower)
-            audioMeterPeak.value = CGFloat(midPeak)
-
-            let level = meterTable.ValueAt(inDecibels: midPower);
-            
-            audioMeterLevel.value = CGFloat(level * scale)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        audioMeterPeak.minimumValue = -80
-        audioMeterPeak.maximumValue = 20
-        audioMeterPeak.gradientColors =  [UIColor.green,UIColor.yellow,UIColor.red]
-        
-        audioMeterLevel.minimumValue = 0
-        audioMeterLevel.maximumValue = 100
-        audioMeterLevel.gradientColors =   [UIColor.orange,UIColor.red]
-        
         
         audioMeterSteroR.minimumValue = -80
         audioMeterSteroR.maximumValue = 20
@@ -160,10 +143,6 @@ class ViewController: UIViewController {
         audioMeterSteroL.maximumValue = 20
         audioMeterSteroL.gradientColors = [UIColor.green,UIColor.yellow,UIColor.orange,UIColor.red]
         
-
-        audioMeter.minimumValue = -80
-        audioMeter.maximumValue = 20
-        audioMeter.gradientColors = [UIColor.green,UIColor.yellow,UIColor.red]
         
         playSound(name: "test_-20dBs",withExtension: "mp3")
         

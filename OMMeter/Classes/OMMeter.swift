@@ -230,10 +230,10 @@ public class OMMeter : UIControl
         let height = self.bounds.height
         lowerCircleRadius      = height / 8
         lowerCircleCenterPoint = CGPoint(x:self.bounds.midX, y:height - lowerCircleRadius)
-        lowerChordLeftPoint    = CGPoint(x:(lowerCircleCenterPoint.x - CGFloat(cos(M_PI_4)) * lowerCircleRadius),
-                                         y:(lowerCircleCenterPoint.y - CGFloat(sin(M_PI_4)) * lowerCircleRadius))
-        lowerChordRightPoint   = CGPoint(x:(lowerCircleCenterPoint.x + CGFloat(cos(M_PI_4)) * lowerCircleRadius),
-                                         y:(lowerCircleCenterPoint.y - CGFloat(sin(M_PI_4)) * lowerCircleRadius))
+        lowerChordLeftPoint    = CGPoint(x:(lowerCircleCenterPoint.x - CGFloat(cos(.pi / 4.0)) * lowerCircleRadius),
+                                         y:(lowerCircleCenterPoint.y - CGFloat(sin(.pi / 4.0)) * lowerCircleRadius))
+        lowerChordRightPoint   = CGPoint(x:(lowerCircleCenterPoint.x + CGFloat(cos(.pi / 4.0)) * lowerCircleRadius),
+                                         y:(lowerCircleCenterPoint.y - CGFloat(sin(.pi / 4.0)) * lowerCircleRadius))
         upperCircleRadius         = (lowerChordRightPoint.x - lowerChordLeftPoint.x) * 0.5
         upperRectGlassCenterPoint = CGPoint(x:self.bounds.midX, y:upperCircleRadius)
         upperChordLeftPoint       = CGPoint(x:lowerChordLeftPoint.x, y:upperRectGlassCenterPoint.y)

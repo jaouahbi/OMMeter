@@ -15,8 +15,8 @@ extension UIFont {
     
     static func stringSize(s:String,fontName:String,size:CGSize) -> CGSize {
         for i in (1...50).reversed() {
-            let d = [NSFontAttributeName:UIFont(name:fontName, size:CGFloat(i))!]
-            let sz = (s as NSString).size(attributes: d)
+            let d = [NSAttributedStringKey.font:UIFont(name:fontName, size:CGFloat(i))!]
+            let sz = (s as NSString).size(withAttributes: d)
             if sz.width <= size.width && sz.height <= size.height {
                 return sz
             }

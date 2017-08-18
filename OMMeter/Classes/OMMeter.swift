@@ -52,7 +52,7 @@ public class OMMeter : UIControl
     /// Font
     
     /// Font attributes
-    private var fontAttributtes:[String:Any] = [:]
+    private var fontAttributtes:[NSAttributedStringKey:Any] = [:]
     
     ///Font name (default:HelveticaNeue-Light)
     public var fontName:String = "HelveticaNeue-Light" {
@@ -226,7 +226,7 @@ public class OMMeter : UIControl
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-
+        
         let height = self.bounds.height
         lowerCircleRadius      = height / 8
         lowerCircleCenterPoint = CGPoint(x:self.bounds.midX, y:height - lowerCircleRadius)
@@ -251,7 +251,7 @@ public class OMMeter : UIControl
             // Duplicate the color
             let color = gradientColors[0]
             gradientColors = [color.lighterColor(percent: 0.8), color.darkerColor(percent: 0.5)]
-      }
+        }
         
         numberOfGradientElements = CGFloat(gradientColors.count - 1)
         for colorIndex in 0 ..< gradientColors.count  {
@@ -272,21 +272,21 @@ public class OMMeter : UIControl
         
         // Max string size
         stringMaxSize        = UIFont.stringSize(s: "-\(max(abs(minimumValue),abs(minimumValue)))",
-                                          fontName: fontName,
-                                              size: stringSizeToFit)
+            fontName: fontName,
+            size: stringSizeToFit)
         // Configure the font attributes
         paragraphStyle.alignment = .center
-        fontAttributtes = [NSFontAttributeName: UIFont(name: fontName, size: stringMaxSize.height)!,
-                           NSParagraphStyleAttributeName: paragraphStyle,
-                           NSForegroundColorAttributeName: fontColor,
+        fontAttributtes = [NSAttributedStringKey.font: UIFont(name: fontName, size: stringMaxSize.height)!,
+                           NSAttributedStringKey.paragraphStyle: paragraphStyle,
+                           NSAttributedStringKey.foregroundColor: fontColor,
                            // https://developer.apple.com/library/content/qa/qa1531/_index.html
-                           // Supply a negative value for stroke width that is 2% of the font point size in thickness
-                           NSStrokeWidthAttributeName:NSNumber(value:-2.0),
-                           NSStrokeColorAttributeName:UIColor.white] as [String : Any]
+            // Supply a negative value for stroke width that is 2% of the font point size in thickness
+            NSAttributedStringKey.strokeWidth:NSNumber(value:-2.0),
+            NSAttributedStringKey.strokeColor:UIColor.white]
         
         setNeedsDisplay()
     }
-    
+
     /// Draw text and ticks
     ///
     /// - Parameter context: current context
@@ -326,10 +326,12 @@ public class OMMeter : UIControl
                                     output_start: minimumValue,
                                     output_end: maximumValue)
                 let textLevelRect = CGRect(x: pointTickMid.x + stringMaxSize.width  - (stringMaxSize.width * 0.5),
-                                      y: pointTickMid.y - stringMaxSize.height,
-                                      width: stringMaxSize.width,
-                                      height: stringMaxSize.height)
-                "\(Int(textLevel))".draw(with:textLevelRect, options: .usesLineFragmentOrigin, attributes: fontAttributtes, context: nil)
+                                           y: pointTickMid.y - stringMaxSize.height,
+                                           width: stringMaxSize.width,
+                                           height: stringMaxSize.height)
+                
+                let levelString = "\(Int(textLevel))" as NSString
+                levelString.draw(with:textLevelRect, options: .usesLineFragmentOrigin, attributes: fontAttributtes, context: nil)
                 context.addRect(textLevelRect)
                 context.move(to:CGPoint(x:pointTickMid.x + tickLengthTen, y:pointTickMid.y))
             } else if i % 5 == 0 {

@@ -94,7 +94,7 @@ class ViewController: UIViewController {
             try AVAudioSession.sharedInstance().setActive(true)
             
             /// change fileTypeHint according to the type of your audio file (you can omit this)
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
             player.isMeteringEnabled = meteringEnabled
             player.numberOfLoops     = numberOfLoops
             // no need for prepareToPlay because prepareToPlay is happen automatically when calling play()
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
     }
     
     
-    func updateMeters() {
+    @objc func updateMeters() {
         if (player.isPlaying ) {
             player.updateMeters()
             var power = 0.0;

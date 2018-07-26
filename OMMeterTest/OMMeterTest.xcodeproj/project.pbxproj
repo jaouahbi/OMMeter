@@ -21,6 +21,8 @@
 		358B4BBA1DE97809004958B0 /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB31DE97809004958B0 /* UIColor+Interpolation.swift */; };
 		358B4BBB1DE97809004958B0 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB41DE97809004958B0 /* UIFont+Extensions.swift */; };
 		358B4BBC1DE978F5004958B0 /* test_-20dBs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */; };
+		E10F3EB020FEF711003A68FC /* atmosbasement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E10F3EAF20FEF711003A68FC /* atmosbasement.mp3 */; };
+		E10F3EB220FEFDFD003A68FC /* atmosbasement.txt in Resources */ = {isa = PBXBuildFile; fileRef = E10F3EB120FEFDFD003A68FC /* atmosbasement.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,10 @@
 		358B4BB21DE97809004958B0 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		358B4BB31DE97809004958B0 /* UIColor+Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Interpolation.swift"; sourceTree = "<group>"; };
 		358B4BB41DE97809004958B0 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
-		35DFF8321DD05BA700996DDA /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35DFF8321DD05BA700996DDA /* OMMeterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMMeterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "test_-20dBs.mp3"; sourceTree = "<group>"; };
+		E10F3EAF20FEF711003A68FC /* atmosbasement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = atmosbasement.mp3; sourceTree = "<group>"; };
+		E10F3EB120FEFDFD003A68FC /* atmosbasement.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = atmosbasement.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,14 @@
 		354CB8DD1DE1A4D900B6675B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E10F3EB120FEFDFD003A68FC /* atmosbasement.txt */,
+				E10F3EAF20FEF711003A68FC /* atmosbasement.mp3 */,
 				35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		357DB4901DD34B0B00873A82 /* Example */ = {
+		357DB4901DD34B0B00873A82 /* OMMeterTest */ = {
 			isa = PBXGroup;
 			children = (
 				358B4BAC1DE97809004958B0 /* OMMeter */,
@@ -74,7 +80,7 @@
 				357DB4981DD34B0B00873A82 /* ViewController.swift */,
 				354CB8DB1DE195B000B6675B /* AudioTableMeter.swift */,
 			);
-			path = Example;
+			path = OMMeterTest;
 			sourceTree = "<group>";
 		};
 		358B4BAC1DE97809004958B0 /* OMMeter */ = {
@@ -103,7 +109,7 @@
 		35DFF8291DD05BA700996DDA = {
 			isa = PBXGroup;
 			children = (
-				357DB4901DD34B0B00873A82 /* Example */,
+				357DB4901DD34B0B00873A82 /* OMMeterTest */,
 				35DFF8331DD05BA700996DDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +117,7 @@
 		35DFF8331DD05BA700996DDA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35DFF8321DD05BA700996DDA /* Example.app */,
+				35DFF8321DD05BA700996DDA /* OMMeterTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35DFF8311DD05BA700996DDA /* Example */ = {
+		35DFF8311DD05BA700996DDA /* OMMeterTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35DFF8471DD05BA700996DDA /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 35DFF8471DD05BA700996DDA /* Build configuration list for PBXNativeTarget "OMMeterTest" */;
 			buildPhases = (
 				35DFF82E1DD05BA700996DDA /* Sources */,
 				35DFF82F1DD05BA700996DDA /* Frameworks */,
@@ -131,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = OMMeterTest;
 			productName = OMThermometer;
-			productReference = 35DFF8321DD05BA700996DDA /* Example.app */;
+			productReference = 35DFF8321DD05BA700996DDA /* OMMeterTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,17 +149,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = jom;
 				TargetAttributes = {
 					35DFF8311DD05BA700996DDA = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 63VS76LF7H;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 35DFF82D1DD05BA700996DDA /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = 35DFF82D1DD05BA700996DDA /* Build configuration list for PBXProject "OMMeterTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -166,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35DFF8311DD05BA700996DDA /* Example */,
+				35DFF8311DD05BA700996DDA /* OMMeterTest */,
 			);
 		};
 /* End PBXProject section */
@@ -177,8 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				358B4BBC1DE978F5004958B0 /* test_-20dBs.mp3 in Resources */,
+				E10F3EB020FEF711003A68FC /* atmosbasement.mp3 in Resources */,
 				357DB49C1DD34B0B00873A82 /* Main.storyboard in Resources */,
 				357DB49A1DD34B0B00873A82 /* Assets.xcassets in Resources */,
+				E10F3EB220FEFDFD003A68FC /* atmosbasement.txt in Resources */,
 				357DB49B1DD34B0B00873A82 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +247,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -245,6 +255,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -295,6 +306,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -302,6 +314,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -336,11 +349,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				DEVELOPMENT_TEAM = 63VS76LF7H;
+				INFOPLIST_FILE = "$(SRCROOT)/OMMeterTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jom.OMMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -349,11 +362,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				DEVELOPMENT_TEAM = 63VS76LF7H;
+				INFOPLIST_FILE = "$(SRCROOT)/OMMeterTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jom.OMMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -361,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35DFF82D1DD05BA700996DDA /* Build configuration list for PBXProject "Example" */ = {
+		35DFF82D1DD05BA700996DDA /* Build configuration list for PBXProject "OMMeterTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35DFF8451DD05BA700996DDA /* Debug */,
@@ -370,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35DFF8471DD05BA700996DDA /* Build configuration list for PBXNativeTarget "Example" */ = {
+		35DFF8471DD05BA700996DDA /* Build configuration list for PBXNativeTarget "OMMeterTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35DFF8481DD05BA700996DDA /* Debug */,

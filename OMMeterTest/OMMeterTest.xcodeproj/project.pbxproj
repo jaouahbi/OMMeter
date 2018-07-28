@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		354CB8DC1DE195B000B6675B /* AudioTableMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354CB8DB1DE195B000B6675B /* AudioTableMeter.swift */; };
 		357DB4991DD34B0B00873A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357DB4911DD34B0B00873A82 /* AppDelegate.swift */; };
 		357DB49A1DD34B0B00873A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357DB4921DD34B0B00873A82 /* Assets.xcassets */; };
 		357DB49B1DD34B0B00873A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357DB4931DD34B0B00873A82 /* LaunchScreen.storyboard */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		354CB8DB1DE195B000B6675B /* AudioTableMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableMeter.swift; sourceTree = "<group>"; };
 		357DB4911DD34B0B00873A82 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		357DB4921DD34B0B00873A82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		357DB4941DD34B0B00873A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				357DB4951DD34B0B00873A82 /* Main.storyboard */,
 				357DB4971DD34B0B00873A82 /* Info.plist */,
 				357DB4981DD34B0B00873A82 /* ViewController.swift */,
-				354CB8DB1DE195B000B6675B /* AudioTableMeter.swift */,
 			);
 			path = OMMeterTest;
 			sourceTree = "<group>";
@@ -204,7 +201,6 @@
 				358B4BB71DE97809004958B0 /* Interpolation.swift in Sources */,
 				358B4BBA1DE97809004958B0 /* UIColor+Interpolation.swift in Sources */,
 				358B4BB91DE97809004958B0 /* UIColor+Extensions.swift in Sources */,
-				354CB8DC1DE195B000B6675B /* AudioTableMeter.swift in Sources */,
 				358B4BB61DE97809004958B0 /* CGFloat+Math.swift in Sources */,
 				357DB4991DD34B0B00873A82 /* AppDelegate.swift in Sources */,
 				358B4BBB1DE97809004958B0 /* UIFont+Extensions.swift in Sources */,

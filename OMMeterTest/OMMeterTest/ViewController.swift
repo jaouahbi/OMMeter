@@ -9,77 +9,10 @@
 import UIKit
 import AVFoundation
 
-// http://web-tech.ga-usa.com/2012/05/creating-a-custom-hot-to-cold-temperature-color-gradient-for-use-with-rrdtool/
-
-let gradientColorsHotToCold = Array([
-    UIColor(hex: "#FF0000"),
-    UIColor(hex: "#FF0a00"),
-    UIColor(hex: "#FF1400"),
-    UIColor(hex: "#FF1e00"),
-    UIColor(hex: "#FF2800"),
-    UIColor(hex: "#FF3200"),
-    UIColor(hex: "#FF3c00"),
-    UIColor(hex: "#FF4600"),
-    UIColor(hex: "#FF5000"),
-    UIColor(hex: "#FF5a00"),
-    UIColor(hex: "#FF6400"),
-    UIColor(hex: "#FF6e00"),
-    UIColor(hex: "#FF7800"),
-    UIColor(hex: "#FF8200"),
-    UIColor(hex: "#FF8c00"),
-    UIColor(hex: "#FF9600"),
-    UIColor(hex: "#FFa000"),
-    UIColor(hex: "#FFaa00"),
-    UIColor(hex: "#FFb400"),
-    UIColor(hex: "#FFbe00"),
-    UIColor(hex: "#FFc800"),
-    UIColor(hex: "#FFd200"),
-    UIColor(hex: "#FFdc00"),
-    UIColor(hex: "#FFe600"),
-    UIColor(hex: "#FFf000"),
-    UIColor(hex: "#FFfa00"),
-    UIColor(hex: "#fdff00"),
-    UIColor(hex: "#d7ff00"),
-    UIColor(hex: "#b0ff00"),
-    UIColor(hex: "#8aff00"),
-    UIColor(hex: "#65ff00"),
-    UIColor(hex: "#3eff00"),
-    UIColor(hex: "#17ff00"),
-    UIColor(hex: "#00ff10"),
-    UIColor(hex: "#00ff36"),
-    UIColor(hex: "#00ff5c"),
-    UIColor(hex: "#00ff83"),
-    UIColor(hex: "#00ffa8"),
-    UIColor(hex: "#00ffd0"),
-    UIColor(hex: "#00fff4"),
-    UIColor(hex: "#00e4ff"),
-    UIColor(hex: "#00d4ff"),
-    UIColor(hex: "#00c4ff"),
-    UIColor(hex: "#00b4ff"),
-    UIColor(hex: "#00a4ff"),
-    UIColor(hex: "#0094ff"),
-    UIColor(hex: "#0084ff"),
-    UIColor(hex: "#0074ff"),
-    UIColor(hex: "#0064ff"),
-    UIColor(hex: "#0054ff"),
-    UIColor(hex: "#0044ff"),
-    UIColor(hex: "#0032ff"),
-    UIColor(hex: "#0022ff"),
-    UIColor(hex: "#0012ff"),
-    UIColor(hex: "#0002ff"),
-    UIColor(hex: "#0000ff"),
-    UIColor(hex: "#0100ff"),
-    UIColor(hex: "#0200ff"),
-    UIColor(hex: "#0300ff"),
-    UIColor(hex: "#0400ff"),
-    UIColor(hex: "#0500ff")].reversed());
-
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var audioMeterSteroR:OMMeter!
     @IBOutlet weak var audioMeterSteroL:OMMeter!
-    
     var averagePower:Bool = true
     var player: AVAudioPlayer = AVAudioPlayer()
     

@@ -24,8 +24,9 @@
 import UIKit
 
 /**
-*  @brief  CGSize Extension
-*/
+ *  @brief  CGSize Extension
+ */
+
 extension CGSize
 {
     func min() -> CGFloat {

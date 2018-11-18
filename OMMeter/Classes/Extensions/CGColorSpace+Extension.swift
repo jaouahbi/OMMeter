@@ -21,21 +21,22 @@
 //  Created by Jorge Ouahbi on 13/5/16.
 //  Copyright © 2016 Jorge Ouahbi. All rights reserved.
 //
-//  v 1.0
+//  v1.0
 
 import UIKit
 
 extension CGColorSpaceModel {
     var name : String {
         switch self {
-        case .unknown:return "Unknown"
-        case .monochrome:return "Monochrome"
-        case .rgb:return "RGB"
-        case .cmyk:return "CMYK"
-        case .lab:return "Lab"
-        case .deviceN:return "DeviceN"
-        case .indexed:return "Indexed"
-        case .pattern:return "Pattern"
+            case .unknown:return "Unknown"
+            case .monochrome:return "Monochrome"
+            case .rgb:return "RGB"
+            case .cmyk:return "CMYK"
+            case .lab:return "Lab"
+            case .deviceN:return "DeviceN"
+            case .indexed:return "Indexed"
+            case .pattern:return "Pattern"
+            case .XYZ:return "XYZ"
         }
     }
 }
@@ -65,5 +66,7 @@ extension CGColorSpace {
     var isPattern : Bool {
         return model == .pattern
     }
-    
+    var isXYZ : Bool {
+        return model == .XYZ
+    }
 }

@@ -12,14 +12,16 @@
 		357DB49B1DD34B0B00873A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357DB4931DD34B0B00873A82 /* LaunchScreen.storyboard */; };
 		357DB49C1DD34B0B00873A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357DB4951DD34B0B00873A82 /* Main.storyboard */; };
 		357DB49E1DD34B0B00873A82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357DB4981DD34B0B00873A82 /* ViewController.swift */; };
-		358B4BB51DE97809004958B0 /* CGColorSpace+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BAE1DE97809004958B0 /* CGColorSpace+Extension.swift */; };
-		358B4BB61DE97809004958B0 /* CGFloat+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BAF1DE97809004958B0 /* CGFloat+Math.swift */; };
 		358B4BB71DE97809004958B0 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB01DE97809004958B0 /* Interpolation.swift */; };
 		358B4BB81DE97809004958B0 /* OMMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB11DE97809004958B0 /* OMMeter.swift */; };
-		358B4BB91DE97809004958B0 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB21DE97809004958B0 /* UIColor+Extensions.swift */; };
-		358B4BBA1DE97809004958B0 /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB31DE97809004958B0 /* UIColor+Interpolation.swift */; };
-		358B4BBB1DE97809004958B0 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4BB41DE97809004958B0 /* UIFont+Extensions.swift */; };
 		358B4BBC1DE978F5004958B0 /* test_-20dBs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */; };
+		C9F1325021A183A500BF14BB /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1324F21A183A500BF14BB /* Math.swift */; };
+		C9F1325A21A184B300BF14BB /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1325421A184B300BF14BB /* UIColor+Interpolation.swift */; };
+		C9F1325B21A184B300BF14BB /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1325521A184B300BF14BB /* UIFont+Extensions.swift */; };
+		C9F1325C21A184B300BF14BB /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1325621A184B300BF14BB /* UIColor+Extensions.swift */; };
+		C9F1325D21A184B300BF14BB /* CGFloat+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1325721A184B300BF14BB /* CGFloat+Math.swift */; };
+		C9F1325E21A184B300BF14BB /* CGSize+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1325821A184B300BF14BB /* CGSize+Math.swift */; };
+		C9F1325F21A184B300BF14BB /* CGColorSpace+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1325921A184B300BF14BB /* CGColorSpace+Extension.swift */; };
 		E10F3EB020FEF711003A68FC /* atmosbasement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E10F3EAF20FEF711003A68FC /* atmosbasement.mp3 */; };
 		E10F3EB220FEFDFD003A68FC /* atmosbasement.txt in Resources */ = {isa = PBXBuildFile; fileRef = E10F3EB120FEFDFD003A68FC /* atmosbasement.txt */; };
 /* End PBXBuildFile section */
@@ -31,15 +33,17 @@
 		357DB4961DD34B0B00873A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		357DB4971DD34B0B00873A82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		357DB4981DD34B0B00873A82 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		358B4BAE1DE97809004958B0 /* CGColorSpace+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColorSpace+Extension.swift"; sourceTree = "<group>"; };
-		358B4BAF1DE97809004958B0 /* CGFloat+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Math.swift"; sourceTree = "<group>"; };
 		358B4BB01DE97809004958B0 /* Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
 		358B4BB11DE97809004958B0 /* OMMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMMeter.swift; sourceTree = "<group>"; };
-		358B4BB21DE97809004958B0 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		358B4BB31DE97809004958B0 /* UIColor+Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Interpolation.swift"; sourceTree = "<group>"; };
-		358B4BB41DE97809004958B0 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		35DFF8321DD05BA700996DDA /* OMMeterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMMeterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F21FBD1DE975BA00D4BC0A /* test_-20dBs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "test_-20dBs.mp3"; sourceTree = "<group>"; };
+		C9F1324F21A183A500BF14BB /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		C9F1325421A184B300BF14BB /* UIColor+Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Interpolation.swift"; sourceTree = "<group>"; };
+		C9F1325521A184B300BF14BB /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		C9F1325621A184B300BF14BB /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		C9F1325721A184B300BF14BB /* CGFloat+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Math.swift"; sourceTree = "<group>"; };
+		C9F1325821A184B300BF14BB /* CGSize+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Math.swift"; sourceTree = "<group>"; };
+		C9F1325921A184B300BF14BB /* CGColorSpace+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColorSpace+Extension.swift"; sourceTree = "<group>"; };
 		E10F3EAF20FEF711003A68FC /* atmosbasement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = atmosbasement.mp3; sourceTree = "<group>"; };
 		E10F3EB120FEFDFD003A68FC /* atmosbasement.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = atmosbasement.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,13 +96,10 @@
 		358B4BAD1DE97809004958B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				358B4BAE1DE97809004958B0 /* CGColorSpace+Extension.swift */,
-				358B4BAF1DE97809004958B0 /* CGFloat+Math.swift */,
+				C9F1325321A184B300BF14BB /* Extensions */,
+				C9F1324F21A183A500BF14BB /* Math.swift */,
 				358B4BB01DE97809004958B0 /* Interpolation.swift */,
 				358B4BB11DE97809004958B0 /* OMMeter.swift */,
-				358B4BB21DE97809004958B0 /* UIColor+Extensions.swift */,
-				358B4BB31DE97809004958B0 /* UIColor+Interpolation.swift */,
-				358B4BB41DE97809004958B0 /* UIFont+Extensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -117,6 +118,19 @@
 				35DFF8321DD05BA700996DDA /* OMMeterTest.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C9F1325321A184B300BF14BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9F1325421A184B300BF14BB /* UIColor+Interpolation.swift */,
+				C9F1325521A184B300BF14BB /* UIFont+Extensions.swift */,
+				C9F1325621A184B300BF14BB /* UIColor+Extensions.swift */,
+				C9F1325721A184B300BF14BB /* CGFloat+Math.swift */,
+				C9F1325821A184B300BF14BB /* CGSize+Math.swift */,
+				C9F1325921A184B300BF14BB /* CGColorSpace+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,15 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				358B4BB51DE97809004958B0 /* CGColorSpace+Extension.swift in Sources */,
+				C9F1325A21A184B300BF14BB /* UIColor+Interpolation.swift in Sources */,
 				357DB49E1DD34B0B00873A82 /* ViewController.swift in Sources */,
+				C9F1325E21A184B300BF14BB /* CGSize+Math.swift in Sources */,
 				358B4BB71DE97809004958B0 /* Interpolation.swift in Sources */,
-				358B4BBA1DE97809004958B0 /* UIColor+Interpolation.swift in Sources */,
-				358B4BB91DE97809004958B0 /* UIColor+Extensions.swift in Sources */,
-				358B4BB61DE97809004958B0 /* CGFloat+Math.swift in Sources */,
+				C9F1325F21A184B300BF14BB /* CGColorSpace+Extension.swift in Sources */,
+				C9F1325D21A184B300BF14BB /* CGFloat+Math.swift in Sources */,
+				C9F1325C21A184B300BF14BB /* UIColor+Extensions.swift in Sources */,
 				357DB4991DD34B0B00873A82 /* AppDelegate.swift in Sources */,
-				358B4BBB1DE97809004958B0 /* UIFont+Extensions.swift in Sources */,
 				358B4BB81DE97809004958B0 /* OMMeter.swift in Sources */,
+				C9F1325021A183A500BF14BB /* Math.swift in Sources */,
+				C9F1325B21A184B300BF14BB /* UIFont+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

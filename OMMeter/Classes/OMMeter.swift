@@ -41,7 +41,7 @@ public class OMMeter : UIControl
     
     /// Glass effect
     
-    private var rectGlassLeft:CGRect = CGRect.zero;
+    private var rectGlassLeft:CGRect  = CGRect.zero;
     private var rectGlassRight:CGRect = CGRect.zero;
     
     private var numberOfGradientElements:CGFloat = 0
@@ -86,21 +86,21 @@ public class OMMeter : UIControl
     /// Minimum value
     public var minimumValue:CGFloat = -80 {
         didSet {
-            value.clamp(toLowerValue: minimumValue, upperValue: maximumValue)
+            value = clamp(value, lowerValue: minimumValue, upperValue: maximumValue)
             setNeedsLayout()
         }
     }
     /// Maximum value
     public var maximumValue:CGFloat = 0 {
         didSet {
-            value.clamp(toLowerValue: minimumValue, upperValue: maximumValue)
+            value = clamp(value, lowerValue: minimumValue, upperValue: maximumValue)
             setNeedsLayout()
         }
     }
     /// Current value
     public var value:CGFloat = 0 {
         didSet {
-            value.clamp(toLowerValue: minimumValue, upperValue: maximumValue)
+            value = clamp(value, lowerValue: minimumValue, upperValue: maximumValue)
             sendActions(for: .valueChanged)
             setNeedsLayout()
         }
@@ -305,10 +305,10 @@ public class OMMeter : UIControl
         context.setStrokeColor(color)
         context.setShadow(offset: shadowOffset, blur: shadowBlur, color:shadowColor)
         context.setLineWidth(tickLineWidth)
-        
-        let tickLengthTen  =  ((self.bounds.width  / 3.0) * 0.5)
-        let tickLengthFive =  ((self.bounds.width  / 3.0) * 0.25)
-        let tickLengthOne  =  ((self.bounds.width  / 3.0) * 0.125)
+        let width          = self.bounds.width
+        let tickLengthTen  =  ((width  / 3.0) * 0.5)
+        let tickLengthFive =  ((width  / 3.0) * 0.25)
+        let tickLengthOne  =  ((width  / 3.0) * 0.125)
         
         // Configure the ticks
         let numberOfTicksElements = CGFloat(numberOfTicks - 1)

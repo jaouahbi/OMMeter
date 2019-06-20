@@ -52,7 +52,7 @@ public class OMMeter : UIControl
     /// Font
     
     /// Font attributes
-    private var fontAttributtes:[NSAttributedStringKey:Any] = [:]
+    private var fontAttributtes:[NSAttributedString.Key:Any] = [:]
     
     ///Font name (default:HelveticaNeue-Light)
     public var fontName:String = "HelveticaNeue-Light" {
@@ -276,13 +276,13 @@ public class OMMeter : UIControl
             size: stringSizeToFit)
         // Configure the font attributes
         paragraphStyle.alignment = .center
-        fontAttributtes = [NSAttributedStringKey.font: UIFont(name: fontName, size: stringMaxSize.height)!,
-                           NSAttributedStringKey.paragraphStyle: paragraphStyle,
-                           NSAttributedStringKey.foregroundColor: fontColor,
+        fontAttributtes = [NSAttributedString.Key.font: UIFont(name: fontName, size: stringMaxSize.height)!,
+                           NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                           NSAttributedString.Key.foregroundColor: fontColor,
                            // https://developer.apple.com/library/content/qa/qa1531/_index.html
             // Supply a negative value for stroke width that is 2% of the font point size in thickness
-            NSAttributedStringKey.strokeWidth:NSNumber(value:-2.0),
-            NSAttributedStringKey.strokeColor:UIColor.white]
+            NSAttributedString.Key.strokeWidth:NSNumber(value:-2.0),
+            NSAttributedString.Key.strokeColor:UIColor.white]
         
         setNeedsDisplay()
     }
